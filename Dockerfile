@@ -7,7 +7,7 @@ RUN set -x \
     && addgroup -g 101 -S nginx \
     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx
 
-RUN apk --no-cache add php php-cli php-fpm php-tokenizer php-session php-json php-mbstring php-curl php-pdo php-pdo_mysql mariadb-client php-curl php-xml curl php-xml php-mysqlnd php-mysqli php-redis
+RUN apk --no-cache add php php-cli php-fpm php-tokenizer php-session php-json php-mbstring php-curl php-pdo php-pdo_mysql mariadb-client php-curl php-xml curl php-xml php-mysqlnd php-mysqli php-pecl-redis
 
 RUN rm /etc/php7/php-fpm.d/www.conf
 RUN rm /etc/php7/php.ini
